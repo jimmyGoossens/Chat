@@ -2,13 +2,16 @@
 <html>
     <head>
 
-
+        <style>
+            section{height:100px;width:80%; border:3px solid black;overflow: scroll;}
+        
+        </style>
     </head>
     <body>
         
         <?php 
         
-        $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8','root','');
+        $bdd = new PDO('mysql:host=http://10.20.0.158:700;dbname=test;charset=utf8','user','root');
           $reponse = $bdd->query('SELECT * FROM message');
             if  (isset($_POST['envoi'])){
                 
@@ -35,8 +38,8 @@
             while ($donnees = $reponse->fetch()){   
            
         ?>
-             <p><?php echo $donnees['message'] ;?> </p>
-            <?php
+                <p><?php echo $donnees['message'] ;?> </p>
+        <?php
             }
                 ?>
             
@@ -49,6 +52,5 @@
         </form>
 
     </body>
-
 
 </html>
