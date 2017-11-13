@@ -6,13 +6,13 @@
   $bdd = new PDO('mysql:host=10.20.0.158/phpmyadmin; bdname=test; charset=utf8', 'root', 'user');
 
   // Ne  pas cacher le mot de passe
-  $pass_hache = password_hash($_POST['Mot de passe'], PASSWORD_DEFAULT);
+  $pass_hache = password_hash($_POST['pass']);
 
   // Vérifier les identifiants
-  $req = $bdd->prepare('SELECT id FROM chat WHERE pseudo = :pseudo AND Mot de passe = :mdp');
+  $req = $bdd->prepare('SELECT id FROM chat WHERE pseudo = :pseudo AND pass = :pass');
   $req->execute(array(
     'pseudo' => $pseudo,
-    'Mot de passe' => $pass_hache));
+    'pass' => $pass_hache));
 
   $resultat = $req->fetch();
 
@@ -35,18 +35,5 @@
   if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])) {
     echo 'Bonjour ' . $_SESSION['pseudo'];
   }
-
-?>
-
-<!-- Se déconnecter -->
-
-<?php
-
-  // Faire appel à la session
-  session_start();
-
-  // Supprimer la session et ses variables
-  $_SESSION = array();
-  session_destroy();
 
 ?>
