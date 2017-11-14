@@ -1,5 +1,4 @@
-/* HEADER*/
-* {
+/* {
   box-sizing: border-box;
 }
 body {
@@ -71,7 +70,6 @@ header {
   clear: both;
   min-height: 250px;
 }
-/* MAINNAV*/
 nav ul{
   margin-left: 200px;
   padding-top: 1em;
@@ -89,7 +87,6 @@ nav ul li a {
 nav ul li {
   float:left;
 }
-/* CONTENAIR*/
 .fullpage {
   margin-top:0;
   padding-bottom: 200px;
@@ -101,7 +98,6 @@ section {
   text-align:center;
   display: block;
 }
-/*css Form*/
 .connect {
   padding-top: 1em;
   margin-left: 60%;
@@ -124,7 +120,6 @@ section {
   border: 1px solid #b6b6b6;
   text-decoration: none;
 }
-/* LISTE*/
 ul {
   list-style:none;
   margin: 0;
@@ -138,7 +133,6 @@ ul {
   font-size: 1.5em;
   padding-left: 1em;
 }
-/*TITRES*/
 h1 ,h2,h3,h4 {
   font-family:"verdana",sans-serif;
   font-weight: bold;
@@ -164,7 +158,6 @@ h1.logo
   font-size: 1em;
   line-height: 1.5em;
 }
-/* visualcontent*/
 a {
   display: block;
 }
@@ -176,7 +169,6 @@ a:link {
   width: 100px;
   height: 100px;
   margin-right: 5em;
-  /*margin: 0;*/
   padding: 0;
   float: left;
 }
@@ -226,17 +218,15 @@ input {
   font-size: 1em;
   border: none;
 }
-/*FLEX*/
 .partners {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-/* FOOTER*/
 footer{
   text-align: center;
   background-color:#000;
   height:auto;
   margin: 0 auto;
   padding: 10px;
-}
+}*/
