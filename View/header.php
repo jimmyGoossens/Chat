@@ -12,8 +12,8 @@
     <div class="mainnav">
       <h1 class="logo"><span>titre</span><a href="#"> <img src="image/chat.svg"/></a></h1>
   <div id="connect">
-  <a href="login.php"><div id="btnlogin">Log in</div></a>
-  <a href="form.php"><div id="signup">Sign upp</div></a>
+  <a href="./View/login.php"><div id="btnlogin">Log in</div></a>
+  <a href="./View/formulaire.php"><div id="signup">Sign up</div></a>
   </div>
 </div>
 

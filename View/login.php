@@ -1,4 +1,4 @@
-<form action="connexion.php" method="post">
+<form action="connection.php" method="post">
     Pseudo: <input type="text" name="pseudo" required value="" />
 
     Mot de passe: <input type="password" name="mot_de_passe" required value="" />

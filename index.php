@@ -19,16 +19,20 @@
         case 'inscription':
           include(Controller . 'inscriptionController.php');
           $controller = new inscriptionController();
+          $controller->run();
           break;
         case 'connection':
           include(Controller . 'connectionController.php');
           $controller = new connectionController();
+          $controller->run();
           break;
-        default 'home':
-          include(View . 'home.php');
+        case 'home':
+          include(Controller . 'homeController.php');
+          $controller = new homeController();
+          $controller->run();
           break;
       }
-      $controller->run();
+
 
     ?>
   </body>

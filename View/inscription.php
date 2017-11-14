@@ -8,17 +8,18 @@ if (isset($_POST['email']))
 
     if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email']))
     {
-        $bdd= new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root','user');
+        $bdd= new PDO('mysql:host=10.20.0.158;dbname=test;charset=utf8', 'root','user');
 
         // Inscription membres
-
-        $req= $bdd-> prepare('INSERT INTO membres(pseudo, pass, email) VALUES(:pseudo, :pass, :email)');
-
-        $req->execute(array(
-            'pseudo' => $_POST['pseudo'],
-            'pass' => $_POST['motdepasse'],
-            'email' => $_POST['email']));
-
+        $req= $bdd-> prepare('INSERT INTO chat(pseudo, pass, email) VALUES(:pseudo, :pass, :email)');
+        if ($_POST['motdepasse2'] == $_POST['motdepasse1']) {
+            $req->execute(array(
+                'pseudo' => $_POST['pseudo'],
+                'pass' => $_POST['motdepasse1'],
+                'email' => $_POST['email']));
+        }else {
+            echo 'les mots de passe ne sont pas identique !, cliquez sur : ';
+        }
     }
     else
 
