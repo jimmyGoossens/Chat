@@ -2,14 +2,22 @@
       <!-- contenair principale-->
   <div class="fullpage">
 
-      <form id="contact" name="contactForm" action="inscription.php" methode="post">
-        <fieldset><input type="text" size="14" name="pseudo" id="pseudo" placeholder="Pseudo"></fieldset>
-       <fieldset><input type="text" size="14" name="mdp" id="mdp" placeholder="Password"></fieldset>
-       <fieldset><input type="text" size="14" name="mdp" id="ndp" placeholder="confirmPassword"></fieldset>
-       <fieldset><input type="email" size="14" name="mail" id="mail" placeholder="E-Mail"></fieldset>
-       <fieldset><input type="tel" size="14" name="mail" id="email" placeholder="Confirm E-Mail"></fieldset>
-       <input type="submit" size="14" id="contactsubm" value="send">
-     </form>
+<!--Formulaire Ornela-->
+    <form  action="inscription.php" method="post">
+
+        <label for="pseudo"> Votre pseudo :</label></br>
+        <input type="text" name="pseudo" id="pseudo" placeholder="Ex:elises20"></br>
+
+        <label for="motdepasse"> inserez  un mot de passe :</label></br>
+        <input type="text" name="motdepasse" id="mdp" placeholder="motdepasse"></br>
+
+        <label for="email"> inserez  une adresse e-mail :</label></br>
+        <input type="text" name="email" id="email" placeholder="email"></br>
+
+
+        <input type="submit" name="valider">
+
+    </form>
 
     <!-- fin contenair principale-->
   </div>
