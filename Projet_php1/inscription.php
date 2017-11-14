@@ -1,6 +1,6 @@
 <?php
-
 // Passaword création
+
 
 if (isset($_POST['email']))
 {
@@ -8,9 +8,7 @@ if (isset($_POST['email']))
 
     if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email']))
     {
-        echo 'L\'adresse ' . $_POST['email'] . ' est <strong>valide</strong> !';
-
-        $bdd= new PDO('mysql:host=10.20.0.158/phpmyadmin;dbname=test;charset=utf8', 'root','user');
+        $bdd= new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root','user');
 
         // Inscription membres
 
@@ -23,8 +21,9 @@ if (isset($_POST['email']))
 
     }
     else
-    {
-        echo 'L\'adresse ' . $_POST['email'] . ' n\'est pas valide, recommencez !';
+    {echo '<div class="reponse">';
+        echo 'L\'adresse ' . $_POST['email'] . '  n\'est pas valide, recommencez !';
+    echo '</div>';
     }
 }
 
