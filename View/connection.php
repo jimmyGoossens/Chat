@@ -16,15 +16,18 @@
 
   $resultat = $req->fetch();
 
-  // Message si OK ou MAUVAIS
-  if (!$resultat) {
-    echo 'Mauvais identifiant ou mot de passe !';
-  } else {
-    session_start();
-    $_SESSION['id'] = $resultat['id'];
-    $_SESSION['pseudo'] = $pseudo;
-    echo 'Vous êtes connecté !';
+  // On sécurise la connection et on affiche un message si OK ou MAUVAIS
+  if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)#', $pass_hache)) {
+      if (!$resultat) {
+        echo 'Mauvais identifiant ou mot de passe !';
+      } else {
+          session_start();
+          $_SESSION['id'] = $resultat['id'];
+          $_SESSION['pseudo'] = $pseudo;
+          echo 'Vous êtes connecté !';
+        }
   }
+
 
 ?>
 
