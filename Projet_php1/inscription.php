@@ -21,10 +21,24 @@ if (isset($_POST['email']))
 
     }
     else
+
     {echo '<div class="reponse">';
-        echo 'L\'adresse ' . $_POST['email'] . '  n\'est pas valide, recommencez !';
+        echo 'L\'adresse ' . $_POST['email'] . '  n\'est pas valide,recommencez';
     echo '</div>';
     }
 }
-
  ?>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <bouton>
+        <a href="formulaire.php"> Retour</a>
+        </bouton>
+    </body>
+</html>
