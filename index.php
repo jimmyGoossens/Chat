@@ -14,7 +14,7 @@
     <?php
       include(View . 'header.php');
 
-      $page = isset($_POST['page']) ? htmlentities($_POST['page']) : 'default';
+      $page = isset($_GET['page']) ? htmlentities($_GET['page']) : 'default';
       switch ($page) {
         case 'inscription':
           include(Controller . 'inscriptionController.php');
