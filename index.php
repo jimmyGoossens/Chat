@@ -12,22 +12,22 @@
 
   <body>
     <?php
-      include(view . 'header.php');
+      include(View . 'header.php');
 
-      $page = isset($_POST['page']) ? htmlentities($_POST['page']) : 'default';
+      $page = isset($_GET['page']) ? htmlentities($_GET['page']) : 'default';
       switch ($page) {
         case 'inscription':
-          include(controller . 'inscriptionController.php');
+          include(Controller . 'inscriptionController.php');
           $controller = new inscriptionController();
           $controller->run();
           break;
         case 'connection':
-          include(controller . 'connectionController.php');
+          include(Controller . 'connectionController.php');
           $controller = new connectionController();
           $controller->run();
           break;
         case 'home':
-          include(controller . 'homeController.php');
+          include(Controller . 'homeController.php');
           $controller = new homeController();
           $controller->run();
           break;

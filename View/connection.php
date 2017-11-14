@@ -3,10 +3,10 @@
 
 <?php
   // Lier le fichier à la base de donnée
-  $bdd = new PDO('mysql:host=10.20.0.158:8000; bdname=test; charset=utf8', 'root', 'user');
+  $bdd = new PDO('mysql:host=10.20.0.158; bdname=test; charset=utf8', 'root', 'user');
 
   // Ne  pas cacher le mot de passe
-  $pass_hache = password_hash($_POST['pass']);
+  $pass_hache = password_hash($_GET['pass']);
 
   // Vérifier les identifiants
   $req = $bdd->prepare('SELECT id FROM chat WHERE pseudo = :pseudo AND pass = :pass');
