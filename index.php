@@ -12,23 +12,26 @@
 
   <body>
     <?php
-      include(View . 'header.php');
+      include(view . 'header.php');
 
       $page = isset($_POST['page']) ? htmlentities($_POST['page']) : 'default';
       switch ($page) {
         case 'inscription':
-          include(Controller . 'inscriptionController.php');
+          include(controller . 'inscriptionController.php');
           $controller = new inscriptionController();
+          $controller->run();
           break;
         case 'connection':
-          include(Controller . 'connectionController.php');
+          include(controller . 'connectionController.php');
           $controller = new connectionController();
+          $controller->run();
           break;
-        default 'home':
-          include(View . 'home.php');
+        case 'home':
+          include(controller . 'homeController.php');
+          $controller = new homeController();
+          $controller->run();
           break;
       }
-      $controller->run();
 
     ?>
   </body>
