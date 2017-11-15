@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 <?php
 
   include('header.php');
 
 ?>
 
+=======
+>>>>>>> 2f702595f44da54206614bf5c27c5f6f3b79cbdb
 <form  action="inscription.php" method="post" onsubmit="return validate();">
 
     <label for="pseudo"> Votre pseudo :</label></br>
@@ -22,3 +25,44 @@
     <input type="submit" name="valider">
 
 </form>
+<script type="text/javascript">
+function validate()
+{
+ var error="";
+ var name = document.getElementById( "pseudo" );
+ if( name.value == "" )
+ {
+  error = " vous devez entrer votre nom";
+ 
+ alert(error);
+  return false;
+ }
+
+ var email = document.getElementById( "email" );
+ if( email.value == "" || email.value.indexOf( "@" ) == -1 ){
+  	error = " adresse mail invalide ";
+  	alert(error);
+  	return false;
+ }
+
+ var password = document.getElementById( "mdp1" );
+ if( password.value.length <= 8 ) {
+	  error = " le mot de passe doit faire au moins 8 caractères ";
+	  alert(error);
+	  return false;
+	 }
+
+ var mdp= document.getElementById("mdp2");
+ if(password.value !== mdp.value){
+ 	error = "les deux mot de passes ne correspondent pas ";
+  	alert(error);
+  	return false;
+ }
+ else{
+  return true;
+ }
+
+}
+
+
+</script>
