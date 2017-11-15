@@ -1,7 +1,9 @@
 <!-- Se connecter -->
 
 <?php
-
+  session_start();
+  $__SESSION == jenesaispas;
+  
   // Lier le fichier à la base de donnée
   $bdd = new PDO('mysql:host=10.20.0.158; bdname=test; charset=utf8', 'root', 'user');
 
