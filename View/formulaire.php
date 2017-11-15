@@ -1,4 +1,10 @@
-<form  action="inscription.php" method="post" onsubmit="return validate();>
+<?php
+
+  include('header.php');
+
+?>
+
+<form  action="inscription.php" method="post" onsubmit="return validate();">
 
     <label for="pseudo"> Votre pseudo :</label></br>
     <input type="text" name="pseudo" id="pseudo" placeholder="Ex:elises20"></br>

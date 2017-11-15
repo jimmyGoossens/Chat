@@ -1,7 +1,7 @@
-
 <!-- Se connecter -->
 
 <?php
+
   // Lier le fichier à la base de donnée
   $bdd = new PDO('mysql:host=10.20.0.158; bdname=test; charset=utf8', 'root', 'user');
 
@@ -20,14 +20,13 @@
   if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)#', $pass_hache)) {
       if (!$resultat) {
         echo 'Mauvais identifiant ou mot de passe !';
-      } else {
-          session_start();
-          $_SESSION['id'] = $resultat['id'];
-          $_SESSION['pseudo'] = $pseudo;
-          echo 'Vous êtes connecté !';
-        }
+        } else {
+            session_start();
+            $_SESSION['id'] = $resultat['id'];
+            $_SESSION['pseudo'] = $pseudo;
+            echo $pseudo . 'est connecté !';
+            }
   }
-
 
 ?>
 

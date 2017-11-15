@@ -16,6 +16,11 @@
 
       $page = isset($_GET['page']) ? htmlentities($_GET['page']) : 'default';
       switch ($page) {
+        case 'home':
+          include(Controller . 'homeController.php');
+          $controller = new homeController();
+          $controller->run();
+          break;
         case 'inscription':
           include(Controller . 'inscriptionController.php');
           $controller = new inscriptionController();
@@ -24,11 +29,6 @@
         case 'connection':
           include(Controller . 'connectionController.php');
           $controller = new connectionController();
-          $controller->run();
-          break;
-        case 'home':
-          include(Controller . 'homeController.php');
-          $controller = new homeController();
           $controller->run();
           break;
       }
